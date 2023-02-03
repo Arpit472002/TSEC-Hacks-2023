@@ -20,7 +20,7 @@ class MyUser(AbstractUser):
     created_at        = models.DateTimeField(auto_now_add=True)
     is_verified       = models.BooleanField(default=False)
     interests         = ListCharField(base_field=CharField(max_length=255),size=None,max_length=(255),blank=True,null=True)
-    is_active         = models.BooleanField(default=True)
+    is_active         = models.BooleanField(default=False)
     USERNAME_FIELD='email'
     REQUIRED_FIELDS=['username']
     
